@@ -15,3 +15,8 @@ dy\dx:
 
 Number Sets Symbols:
 - \N, \R, \Z, \O, \Q, \C
+
+Commands:
+
+Centered Title
+\ctitle{Title}
