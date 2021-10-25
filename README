@@ -16,6 +16,9 @@ dy\dx:
 Number Sets Symbols:
 - \N, \R, \Z, \O, \Q, \C
 
+New Section
+- \sect{Section Name}
+
 Commands:
 
 Centered Title
