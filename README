@@ -6,3 +6,8 @@ Packages are labelled with the given suffixes
 [l] - Lab: Contains lab only commands
 [m] - Macros: Contains general macros, commands shared by the course
 [w] - Workspace: Contains homework/assignment specific macros and commands.
+
+Features:
+
+dy\dx Shorthand:
+- \dyx
