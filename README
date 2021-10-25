@@ -1,0 +1,8 @@
+
+This repository contains common macros, commands, and utilities commonly shared by
+my other course package repositories.
+
+Packages are labelled with the given suffixes
+[l] - Lab: Contains lab only commands
+[m] - Macros: Contains general macros, commands shared by the course
+[w] - Workspace: Contains homework/assignment specific macros and commands.
