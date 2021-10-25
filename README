@@ -9,5 +9,9 @@ Packages are labelled with the given suffixes
 
 Features:
 
-dy\dx Shorthand:
+Shorthands
+dy\dx:
 - \dyx
+
+Number Sets Symbols:
+- \N, \R, \Z, \O, \Q, \C
