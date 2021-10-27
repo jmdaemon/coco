@@ -59,3 +59,10 @@
 % Alphanumeric Enums
 \newlist{litem}{enumerate}{5}
 \setlist[litem]{leftmargin=0.5cm, label=(\alph*)}
+
+% Arbitrary alphanumeric character list
+\newcommand\alist[1]{
+\begin{enumerate}[leftmargin=0.5cm]
+    \item[(#1)]
+\end{enumerate}
+}
