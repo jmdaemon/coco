@@ -17,6 +17,14 @@
 \end{subfigure}
 }
 
+\newcommand\csubsvg[3] {
+\begin{subfigure}{0.5\textwidth}
+    \centering
+    \includesvg[width=#3\linewidth, height=#3\linewidth]{#1}
+    \caption{#2}
+\end{subfigure}
+}
+
 \newcommand\newfig[2] {
 \begin{figure}[!htpb]
     \centering
