@@ -73,3 +73,7 @@
     \item[(#1)]
 \end{enumerate}
 }
+
+% Circled Numbers
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}

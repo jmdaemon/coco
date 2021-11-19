@@ -23,3 +23,6 @@ Commands:
 
 Centered Title
 \ctitle{Title}
+
+Circled Numbers
+\circled{1}
