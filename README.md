@@ -46,8 +46,9 @@ Centered Title
 ```
 
 Alphanumeric enums
-``` latex
+
 (a), (b), (c)
+``` latex
 \begin{litem}
 \item
 \item
@@ -56,8 +57,9 @@ Alphanumeric enums
 ```
 
 Arbitrary alphanumeric character lists
-``` latex
+
 d), e), f)
+``` latex
 \alist{d}
 \alist{e}
 \alist{f}
