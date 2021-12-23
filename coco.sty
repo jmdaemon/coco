@@ -23,6 +23,14 @@
 \RequirePackage{wrapfig, blindtext}
 \RequirePackage{fvextra}
 \RequirePackage{relsize}
+\usepackage[hidelinks]{hyperref} % Makes links clickable
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={blue!80!black}
+}
+\usepackage{xurl} % Fixes Overfill/Underfill hbox warnings for hyperref
 \graphicspath{
     {figures/}
     {../figures/}

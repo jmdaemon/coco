@@ -9,20 +9,44 @@ Packages are labelled with the given suffixes
 
 Features:
 
-Shorthands
+Shorthands:
+
 dy\dx:
 - \dyx
 
 Number Sets Symbols:
 - \N, \R, \Z, \O, \Q, \C
 
-New Section
-- \sect{Section Name}
-
 Commands:
+
+New Section
+- \sect{Section Heading}
+
+New Sub Section
+- \subsect{Sub Section Heading}
+
+Question: Shorthand for Q#n
+- \q{1}
 
 Centered Title
 \ctitle{Title}
 
+Alphanumeric enums
+(a), (b), (c)
+\begin{litem}
+\item
+\item
+\item
+\end{litem}
+
+Arbitrary alphanumeric character lists
+d), e), f)
+\alist{d}
+\alist{e}
+\alist{f}
+
 Circled Numbers
 \circled{1}
+
+Inline Markdown code blocks
+\code{add\_two\_lists} % Note that underscores have to be escaped
