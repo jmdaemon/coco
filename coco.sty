@@ -12,7 +12,7 @@
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{mathtools, amsmath, amsthm, amssymb, amsfonts}
-\RequirePackage{physics}
+%\RequirePackage{physics}
 \RequirePackage{physm}
 \RequirePackage{figm}
 \RequirePackage{booktabs}
@@ -101,3 +101,12 @@
 % Use \code{Text}
 \newcommand{\code}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{bgcolor}{\oldtexttt{\hspace*{2pt}\vphantom{A}#1\hspace*{2pt}}}\endgroup}
 \renewcommand{\texttt}[1]{\code{\relscale{.7}\oldtexttt{#1}}}
+
+% Creates hyphen separated lists
+\newlist{dashed}{itemize}{3}
+\setlist[dashed, 1]
+{label=\textendash, nosep,
+    leftmargin=\parindent,
+    rightmargin=10pt
+}
+
