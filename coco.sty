@@ -93,6 +93,9 @@
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 
+% Mini circle for figures
+\newcommand\mc[1]{\footnotesize\circled{#1}}
+
 % Markdown inline `code` formatting
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 
