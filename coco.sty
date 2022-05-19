@@ -4,7 +4,6 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[english]{babel}
-\RequirePackage[table]{xcolor}
 \RequirePackage[none]{hyphenat}
 \RequirePackage{multirow,array}
 \RequirePackage{makecell}
@@ -12,7 +11,6 @@
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{mathtools, amsmath, amsthm, amssymb, amsfonts}
-%\RequirePackage{physics}
 \RequirePackage{physm}
 \RequirePackage{figm}
 \RequirePackage{booktabs}
@@ -23,7 +21,8 @@
 \RequirePackage{wrapfig, blindtext}
 \RequirePackage{fvextra}
 \RequirePackage{relsize}
-\usepackage[hidelinks]{hyperref} % Makes links clickable
+\usepackage{cancel}     % Draw lines cancelling terms
+\usepackage{hyperref}   % Makes links clickable
 \hypersetup{
     colorlinks,
     linkcolor={black},
@@ -112,4 +111,3 @@
     leftmargin=\parindent,
     rightmargin=10pt
 }
-
