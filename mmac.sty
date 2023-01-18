@@ -1,0 +1,21 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mmac}[2023/01/17 Useful shorthand macros for typesetting maths]
+%\RequirePackage{imakeidx}
+%\RequirePackage{xstring}
+
+\RequirePackage{bm}
+
+% Number Sets
+\newcommand\enablenumbersets{
+    \renewcommand\O{\ensuremath{\emptyset}}
+    \newcommand\N{\ensuremath{\mathbb{N}}}
+    \newcommand\R{\ensuremath{\mathbb{R}}}
+    \newcommand\Z{\ensuremath{\mathbb{Z}}}
+    \newcommand\Q{\ensuremath{\mathbb{Q}}}
+    \newcommand\C{\ensuremath{\mathbb{C}}}
+}
+
+% Options
+\DeclareOption{numbersets}{\enablenumbersets}
+\DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
+\ProcessOptions\relax
