@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{coco}[2021/10/21 Common course utilities used across all my courses]
 
+% Third Party Packages
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[english]{babel}
@@ -11,8 +12,6 @@
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{mathtools, amsmath, amsthm, amssymb, amsfonts}
-\RequirePackage{physm}
-\RequirePackage{figm}
 \RequirePackage{booktabs}
 \RequirePackage{lmodern}
 \RequirePackage{enumitem}
@@ -30,6 +29,11 @@
     urlcolor={blue!80!black}
 }
 \usepackage{xurl} % Fixes Overfill/Underfill hbox warnings for hyperref
+
+% My Packages
+\RequirePackage{cunits}
+\RequirePackage{figm}
+
 \graphicspath{
     {figures/}
     {../figures/}
