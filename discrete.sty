@@ -1,0 +1,25 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{discrete}[2023/01/26 Macros for typesetting Discrete Mathematics]
+
+% Options
+\DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
+\ProcessOptions\relax
+
+% NOTE: This is incredibly ugly for some reason (breaks syntax highlighting) so it goes last
+% ==== Argument Environment ====
+% Typeset logical arguments:
+%
+% \begin{argument}
+%     \premise{p \to q}
+%     \premise{p}
+%     \conclusion{q}
+% \end{argument}
+
+% TODO: Make add optional option to to enable blue, black or custom colored lines
+\newenvironment{argument}
+  %{\begin{tabular}{@{}>{$}c<{$}@{\enspace}>{$}l<{$}@{}}\arrayrulecolor{blue!50}}
+  {\begin{tabular}{@{}>{$}c<{$}@{\enspace}>{$}l<{$}@{}}\arrayrulecolor{black!50}}
+  {\end{tabular}
+  }
+\newcommand{\premise}[1]{&#1\\}
+\newcommand{\conclusion}[1]{\cline{2-2}\therefore&#1}
