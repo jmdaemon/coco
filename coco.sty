@@ -90,15 +90,6 @@
 % Mini circle for figures
 \newcommand\mc[1]{\footnotesize\circled{#1}}
 
-% Markdown inline `code` formatting
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-
-\definecolor{bgcolor}{HTML}{E0E0E0}
-\let\oldtexttt\texttt
-% Use \code{Text}
-\newcommand{\code}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{bgcolor}{\oldtexttt{\hspace*{2pt}\vphantom{A}#1\hspace*{2pt}}}\endgroup}
-\renewcommand{\texttt}[1]{\code{\relscale{.7}\oldtexttt{#1}}}
-
 % Creates hyphen separated lists
 \newlist{dashed}{itemize}{3}
 \setlist[dashed, 1]
