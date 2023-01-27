@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{thmstyles}[2023/01/26 Common modular theorem styles]
+
+% Various theorem styles suitable for a variety of contexts
+
+\RequirePackage{thmtools}
+
+% Theorem environments are  : definition,
+% Theorem styles are        :
+    
+% Declare theorem styles
+%\theoremstyle{definition}
+
+%\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={nobreak}]{thmgreenbox}
+%\declaretheorem[numberwithin=section, style=thmgreenbox , name=Definition]{definition}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+
+% Named Definitions Environment
+% Styles the optional parameter (i.e definition name) in bold font
+% Usage:
+% \begin{definition}[Propositions]\label{def:props}
+% Declarative true or false (but not both) statements.
+% \end{definition}
+\declaretheoremstyle[
+    spaceabove=\topsep,
+    spacebelow=\topsep,
+    headfont=\bfseries\sffamily,
+    bodyfont=\normalfont,
+    notefont=\bfseries, notebraces={}{},
+    postheadspace=0.5em,
+    name={\ignorespaces},
+    numbered=no,
+    mdframed={nobreak}, % Make boxed
+    headpunct=:
+]{definition}
+\declaretheorem[style=definition]{definition}
+
+% Options
+\DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
+\ProcessOptions\relax
