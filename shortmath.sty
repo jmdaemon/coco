@@ -1,7 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{shortmath}[2023/01/17 Useful shorthand macros for typesetting maths]
-%\RequirePackage{imakeidx}
-%\RequirePackage{xstring}
 
 \RequirePackage{mathtools, amsmath, amsthm, amssymb, amsfonts}
 \RequirePackage{bm}
@@ -18,21 +16,13 @@
 
 % Logic
 \newcommand\enablelogic{
-    %\let\implies\Rightarrow             %
-    %\let\impliedby\Leftarrow            %
-    %\let\iff\Leftrightarrow             %
-    %\let\epsilon\varepsilon             %
-    \providecommand{\limp}{\to}
-    %\let\impliedby\Leftarrow            %
-    \providecommand{\lbicond}{\Leftrightarrow}
-
-    \providecommand{\lxor}{\veebar}     % Exclusive Or
-    \newcommand*{\lsim}{\mathord{\sim}} % Use 'tilde' as not symbol with proper spacing
+    \providecommand{\lbicond}{\Leftrightarrow}  % Biconditional
+    \providecommand{\lxor}{\veebar}             % Exclusive Or
+    \newcommand*{\lsim}{\mathord{\sim}}         % Use 'tilde' as not symbol with proper spacing
 }
 
-% To use this package, load it and enable any of the following options
-
 % Options
+% Enable any of the following options when using this package:
 \DeclareOption{numbersets}{\enablenumbersets}
 \DeclareOption{logic}{\enablelogic}
 \DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
