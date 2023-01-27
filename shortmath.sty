@@ -15,7 +15,23 @@
     \newcommand\C{\ensuremath{\mathbb{C}}}
 }
 
+% Logic
+\newcommand\enablelogic{
+    %\let\implies\Rightarrow             %
+    %\let\impliedby\Leftarrow            %
+    %\let\iff\Leftrightarrow             %
+    %\let\epsilon\varepsilon             %
+    \providecommand{\limp}{\to}
+    %\let\impliedby\Leftarrow            %
+    \providecommand{\lbicond}{\Leftrightarrow}
+
+    \providecommand{\lxor}{\veebar}     % Exclusive Or
+}
+
+% To use this package, load it and enable any of the following options
+
 % Options
 \DeclareOption{numbersets}{\enablenumbersets}
+\DeclareOption{logic}{\enablelogic}
 \DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
 \ProcessOptions\relax
