@@ -39,8 +39,13 @@
     {../figures/}
 }
 
+\newcommand\noparindent{
+    \setlength{\parskip}{0pt}
+    \setlength{\parindent}{0pt}
+}
+
 % Set Author
-\author{Joseph Diza}
+%\author{Joseph Diza}
 
 % Shorthands
 
@@ -97,3 +102,8 @@
     leftmargin=\parindent,
     rightmargin=10pt
 }
+
+% Options
+\DeclareOption{noparindent}{\noparindent}
+\DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
+\ProcessOptions\relax
