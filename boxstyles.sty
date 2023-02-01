@@ -1,0 +1,26 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{boxstyles}[2023/01/17 Useful shorthand macros for typesetting maths]
+
+\RequirePackage{todonotes}
+\RequirePackage{tcolorbox}
+
+% Make boxes breakable
+\tcbuselibrary{breakable}
+
+\newenvironment{gbox}[1]{\begin{tcolorbox}[
+    arc=0mm,
+    colback=white,
+    colframe=green!60!black,
+    title=#1,
+    fonttitle=\sffamily,
+    breakable
+]}{\end{tcolorbox}}
+
+\newenvironment{bnote}[1]{\begin{tcolorbox}[
+    arc=0mm,
+    colback=white,
+    colframe=white!60!black,
+    title=#1,
+    fonttitle=\sffamily,
+    breakable
+]}{\end{tcolorbox}}
