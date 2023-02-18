@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[table]{xcolor}
+\usepackage[noparindent]{coco}
+\usepackage{discrete}
+
+\begin{document}
+
+\section{Test Case 1: Default Argument Environment}
+\begin{argument}
+    \premise{p \to q}
+    \premise{p}
+    \conclusion{q}
+\end{argument}
+
+\section{Test Case 2: Center Argument Environment}
+\begin{center}
+    \begin{argument}
+        \premise{p \to q}
+        \premise{p}
+        \conclusion{q}
+    \end{argument}
+\end{center}
+
+\section{Test Case 3: Text Argument Environment}
+\begin{textargument}
+    \textpremise if $p$ then $q$
+    \textpremise $p$
+    \textconclusion $q$
+\end{textargument}
+    
+\end{document}
