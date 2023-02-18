@@ -5,6 +5,40 @@
 \DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
 \ProcessOptions\relax
 
+% Text Argument Environment
+% Usage:
+%    \begin{textargument}
+%        \textpremise If at least one of these two numbers is divisible by 6,then the product of these two numbers is divisible by 6.
+%        \textpremise Neither of these two numbers is divisible by 6.
+%        \textconclusion The product of these two numbers is not divisible by 6.
+%    \end{textargument}
+\newenvironment{textargument}{
+    \begin{itemize}
+}{
+    \end{itemize}
+}
+\newcommand{\textpremise}{\item[]}
+\newcommand{\textconclusion}{\item[$\therefore$]}
+
+\newcommand{\set}[1]{\{#1\}}
+
+\newcommand{\blankline}{\textunderscore\textunderscore}
+\newcommand{\blanklinedbl}{\blankline\blankline}
+
+% Useful Commands for Prove Environment
+% Usage:
+%    \begin{align*}
+%        p \lor q                        & \tag*{By (a)} \\
+%        p \land s \to t                 & \tag*{By (c)} \\
+%        p                               & \byspec \\
+%        s \to t                         & \byspec \\
+%    \end{align*}
+\newcommand\bylaw[1]{\tag*{#1}}
+\newcommand\bymodustollens{\bylaw{Modus Tollens}}
+\newcommand\bydoubleneg{\bylaw{Double Negation}}
+\newcommand\byspec{\bylaw{Specialization}}
+\newcommand\byelim{\bylaw{Elimination}}
+
 % NOTE: This is incredibly ugly for some reason (breaks syntax highlighting) so it goes last
 % ==== Argument Environment ====
 % Typeset logical arguments:
@@ -16,10 +50,12 @@
 % \end{argument}
 
 % TODO: Make add optional option to to enable blue, black or custom colored lines
-\newenvironment{argument}
+\newenvironment{argument} {
   %{\begin{tabular}{@{}>{$}c<{$}@{\enspace}>{$}l<{$}@{}}\arrayrulecolor{blue!50}}
-  {\begin{tabular}{@{}>{$}c<{$}@{\enspace}>{$}l<{$}@{}}\arrayrulecolor{black!50}}
-  {\end{tabular}
-  }
+    \begin{tabular}{@{}>{$}c<{$}@{\enspace}>{$}l<{$}@{}}
+        \arrayrulecolor{black!50}
+}{
+    \end{tabular}
+}
 \newcommand{\premise}[1]{&#1\\}
 \newcommand{\conclusion}[1]{\cline{2-2}\therefore&#1}
