@@ -71,35 +71,34 @@
 % Default environments above with newlines
 %
 
-%\declaretheoremstyle[
-    %spaceabove=\topsep,
-    %spacebelow=\topsep,
-    %headfont=\bfseries\sffamily,
-    %bodyfont=\normalfont,
-    %notefont=\bfseries,
-    %notebraces={}{},
-    %postheadspace=0.5em,
-    %name={Theorem},
-    %numbered=yes,
-    %mdframed={nobreak}, % Make boxed
-    %headpunct=
-%]{theoremln}
-%\declaretheorem[numberwithin=section, style=theoremln]{theoremln}
+\declaretheoremstyle[
+    spaceabove=\topsep,
+    spacebelow=\topsep,
+    headfont=\bfseries\sffamily,
+    bodyfont=\normalfont,
+    notefont=\bfseries, notebraces={}{},
+    postheadspace=0.5em,
+    name={Theorem},
+    numbered=yes,
+    mdframed={nobreak}, % Make boxed
+    headpunct=\ \\,
+]{theoremln}
+\declaretheorem[numberwithin=section, style=theoremln]{theoremln}
 
-%\declaretheoremstyle[
-    %spaceabove=\topsep,
-    %spacebelow=\topsep,
-    %headfont=\bfseries\sffamily,
-    %bodyfont=\normalfont,
-    %notefont=\bfseries,
-    %notebraces={}{},
-    %postheadspace=0.5em,
-    %name={Corollary},
-    %numbered=yes,
-    %mdframed={nobreak}, % Make boxed
-    %headpunct=\\,
-%]{corollaryln}
-%\declaretheorem[numberwithin=section, style=corollaryln]{corollaryln}
+% Default corollary environment
+\declaretheoremstyle[
+    spaceabove=\topsep,
+    spacebelow=\topsep,
+    headfont=\bfseries\sffamily,
+    bodyfont=\normalfont,
+    notefont=\bfseries, notebraces={}{},
+    postheadspace=0.5em,
+    name={Corollary},
+    numbered=yes,
+    mdframed={nobreak}, % Make boxed
+    headpunct=\ \\,
+]{corollaryln}
+\declaretheorem[numberwithin=section, style=corollaryln]{corollaryln}
 
 % Options
 \DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
