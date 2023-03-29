@@ -78,6 +78,20 @@
     bodyfont=\normalfont,
     notefont=\bfseries, notebraces={}{},
     postheadspace=0.5em,
+    name={\ignorespaces},
+    numbered=no,
+    mdframed={nobreak}, % Make boxed
+    headpunct=:\ \\,
+]{definitionln}
+\declaretheorem[style=definitionln]{definitionln}
+
+\declaretheoremstyle[
+    spaceabove=\topsep,
+    spacebelow=\topsep,
+    headfont=\bfseries\sffamily,
+    bodyfont=\normalfont,
+    notefont=\bfseries, notebraces={}{},
+    postheadspace=0.5em,
     name={Theorem},
     numbered=yes,
     mdframed={nobreak}, % Make boxed
