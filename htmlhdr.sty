@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{htmlhdr}[2023/03/29 Macro for using HTML style headings]
 
+\RequirePackage{suffix}
+
 % Imports
 %\RequirePackage{etoolbox}
 
@@ -60,11 +62,33 @@
 %\newcommand\hiv[1]      { \h{4}{#1} }
 %\newcommand\hv[1]       { \h{5}{#1} }
 
-\newcommand\hi[1]       { \h{1}{\section{#1}} }
-\newcommand\hii[1]      { \h{2}{\subsection{#1}} }
-\newcommand\hiii[1]     { \h{3}{\subsubsection{#1}} }
+%\newcommand\hi[1]       { \h{1}{\section{#1}} }
+%\newcommand\hii[1]      { \h{2}{\subsection{#1}} }
+%\newcommand\hiii[1]     { \h{3}{\subsubsection{#1}} }
 %\newcommand\hiv[1]      { \h{4}{#1} }
 %\newcommand\hv[1]       { \h{5}{#1} }
+
+%\newcommand\hi[1]       { \h{1}{\section{#1}} }
+%\newcommand\hi[1]       { \h{1}{\section{#1}} }
+
+%\newcommand\hi[1]       { \h{1}{\section{#1}} }
+%\WithSuffix\newcommand\hi*[1]{ \h{1}{\section*{#1}} }
+
+%\newcommand\hii[1]      { \h{2}{\subsection{#1}} }
+%\WithSuffix\newcommand\hii*[1]{ \h{2}{\subsection*{#1}} }
+
+%\newcommand\hiii[1]     { \h{3}{\subsubsection{#1}} }
+%\WithSuffix\newcommand\hiii*[1]{ \h{3}{\subsubsection*{#1}} }
+
+
+\newcommand\hi[1]               { \section{#1} }
+\WithSuffix\newcommand\hi*[1]   { \section*{#1} }
+
+\newcommand\hii[1]              { \subsection{#1} }
+\WithSuffix\newcommand\hii*[1]  { \subsection*{#1} }
+
+\newcommand\hiii[1]             { \subsubsection{#1} }
+\WithSuffix\newcommand\hiii*[1] { \subsubsection*{#1} }
 
 % Package Options
 \DeclareOption{noparindent}{\noparindent}
