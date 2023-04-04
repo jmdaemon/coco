@@ -8,13 +8,25 @@
 \newcommand\enablenumbersets{
     \renewcommand\O{\ensuremath{\emptyset}}
     \newcommand\N{\ensuremath{\mathbb{N}}}
-    \newcommand\R{\ensuremath{\mathbb{R}}}
+    \newcommand\W{\ensuremath{\mathbb{W}}}
     \newcommand\Z{\ensuremath{\mathbb{Z}}}
     \newcommand\Q{\ensuremath{\mathbb{Q}}}
+    \newcommand\R{\ensuremath{\mathbb{R}}}
     \newcommand\C{\ensuremath{\mathbb{C}}}
 }
 
+
+% Discrete Math
 \newcommand*\powerset[1]{\mathcal{P} (#1)}
+
+%% Relations
+\newcommand\rel{\mathrel{R}}
+\newcommand\nrel{\not \mathrel{R}}
+
+%%% Functions
+\newcommand*\from{\colon}
+\newcommand*\fn[3]{#1 \from #2 \to #3}
+\newcommand*\fnmap[3]{#1 \from #2 \mapsto #3}
 
 % Number Systems
 % Used to insert a space in long vertical additions/subtractions
