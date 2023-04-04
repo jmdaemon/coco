@@ -1,86 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{htmlhdr}[2023/03/29 Macro for using HTML style headings]
-
 \RequirePackage{suffix}
 
-% Imports
-%\RequirePackage{etoolbox}
-
-%\newcommand{\h}[2]{
-    %\def\level{#1}
-    %\ifstrequal{\level}{1}{\section{#1}}{ }
-%}
-%\h
-
-%\NewDocumentCommand{\starcommand}{ s m }{%
-    %\IfBooleanTF{#1}%
-      %{\foo*}%
-      %{\foo}%
-        %{#2}{a}%
-%}
-
-\NewDocumentCommand{\defstar}{mmmm} {
-    \NewDocumentCommand{#1}{s#2} {
-        \IfBooleanTF{##1}
-            {#4}
-            {#3}
-    }
-}
-
-% Declare Heading Command
-%\newcommand\declarecmdh{
-    %\defstar{\heading}{m}{#1}{#2}
-%}
-
-%\defstar{\heading}{m}{#1}{#2}
-%\declarecmdh
-%\defstar{\heading}{m}{#1}{#2}
-
-\newcommand\h[2]{
-    \heading{#1}{#2}
-    %\defstar{\heading}{m}{#1}{#2}
-}
-%\defstar{\h}{m}{Hello #2 world}{Hello starred, #2 world}
-
-%\NewDocumentCommand{\baz}{ s m }{%
-    %\IfBooleanTF{#1}%
-      %{\foo*}%
-      %{\foo}%
-        %{#2}{a}%
-%}
-
-% \h [*] [level] [string header]
-% \hi [*] [string header]
-% \hii [*] [string header]
-% \hiii [*] [string header]
-% \hiv [*] [string header]
-% \hv [*] [string header]
-
-%\newcommand\hi[1]       { \h{1}{#1} }
-%\newcommand\hii[1]      { \h{2}{#1} }
-%\newcommand\hiii[1]     { \h{3}{#1} }
-%\newcommand\hiv[1]      { \h{4}{#1} }
-%\newcommand\hv[1]       { \h{5}{#1} }
-
-%\newcommand\hi[1]       { \h{1}{\section{#1}} }
-%\newcommand\hii[1]      { \h{2}{\subsection{#1}} }
-%\newcommand\hiii[1]     { \h{3}{\subsubsection{#1}} }
-%\newcommand\hiv[1]      { \h{4}{#1} }
-%\newcommand\hv[1]       { \h{5}{#1} }
-
-%\newcommand\hi[1]       { \h{1}{\section{#1}} }
-%\newcommand\hi[1]       { \h{1}{\section{#1}} }
-
-%\newcommand\hi[1]       { \h{1}{\section{#1}} }
-%\WithSuffix\newcommand\hi*[1]{ \h{1}{\section*{#1}} }
-
-%\newcommand\hii[1]      { \h{2}{\subsection{#1}} }
-%\WithSuffix\newcommand\hii*[1]{ \h{2}{\subsection*{#1}} }
-
-%\newcommand\hiii[1]     { \h{3}{\subsubsection{#1}} }
-%\WithSuffix\newcommand\hiii*[1]{ \h{3}{\subsubsection*{#1}} }
-
-
+% Notes:
+% This could use a macro to simplify the command creation
+% Support for additional environments:
+%   - iv
+%   - v
 \newcommand\hi[1]               { \section{#1} }
 \WithSuffix\newcommand\hi*[1]   { \section*{#1} }
 
