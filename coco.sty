@@ -20,15 +20,16 @@
 \RequirePackage{wrapfig, blindtext}
 \RequirePackage{fvextra}
 \RequirePackage{relsize}
+\RequirePackage{titlesec}
 \usepackage{cancel}     % Draw lines cancelling terms
-\usepackage{hyperref}   % Makes links clickable
+\RequirePackage{hyperref}   % Makes links clickable
 \hypersetup{
     colorlinks,
     linkcolor={black},
     citecolor={black},
     urlcolor={blue!80!black}
 }
-\usepackage{xurl} % Fixes Overfill/Underfill hbox warnings for hyperref
+\RequirePackage{xurl} % Fixes Overfill/Underfill hbox warnings for hyperref
 
 % My Packages
 \RequirePackage{cunits}
@@ -109,7 +110,22 @@
 % Newline
 \newcommand\bl{\ \\}
 
+% Arial Font on Headings
+\newcommand\usearialheadings{
+    \titleformat{\section}{\sffamily\upshape\bfseries\huge}{\thesection}{1em}{}
+    \titleformat{\subsection}{\sffamily\upshape\bfseries\large}{\thesubsection}{1em}{}
+    \titleformat{\subsubsection}{\sffamily\upshape\bfseries}{\thesubsubsection}{1em}{}
+}
+
+% Automatically put sections on new pages if there is not enough space
+\newcommand\usenewpagebeforesection{
+    \AddToHook{cmd/section/before}{\clearpage}
+}
+
+
 % Options
+\DeclareOption{usearialheadings}{\usearialheadings}
+\DeclareOption{usenewpagebeforesection}{\usenewpagebeforesection}
 \DeclareOption{noparindent}{\noparindent}
 \DeclareOption*{\PackageWarning{mmac}{Unknown '\CurrentOption'}}
 \ProcessOptions\relax
