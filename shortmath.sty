@@ -14,12 +14,21 @@
     \newcommand\C{\ensuremath{\mathbb{C}}}
 }
 
+\newcommand*\powerset[1]{\mathcal{P} (#1)}
+
+% Number Systems
+% Used to insert a space in long vertical additions/subtractions
+\newcommand*{\carry}[1][1]{\overset{#1}}
+\newcolumntype{B}[1]{r*{#1}{@{\,}r}}
+
 % Logic
 \newcommand\enablelogic{
     \providecommand{\lbicond}{\Leftrightarrow}  % Biconditional
     \providecommand{\lxor}{\veebar}             % Exclusive Or
     \newcommand*{\lsim}{\mathord{\sim}}         % Use 'tilde' as not symbol with proper spacing
 }
+
+
 
 % Options
 % Enable any of the following options when using this package:
